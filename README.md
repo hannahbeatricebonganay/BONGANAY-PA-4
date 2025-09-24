@@ -18,8 +18,7 @@ import pandas as pd
 df = pd.read_csv("board2.csv")
 ```
 
-#### a.2 Filter the instrumentation tech, hometown Luzon, and Electronics >70 using df
-#### then keep only the "Name", "GEAS", and "Electronics" columns
+#### a.2 Filter the instrumentation tech, hometown Luzon, and Electronics >70 using df then keep only the "Name", "GEAS", and "Electronics" columns
 ```python
 Instru = df[(df["Track"] == "Instrumentation") & 
             (df["Hometown"] == "Luzon") & 
@@ -47,8 +46,7 @@ df = pd.read_csv("board2.csv")
 df["Average"] = df[["Math", "Electronics", "GEAS", "Communication"]].mean(axis=1)
 ```
 
-#### b.3 Filter only the Female students from Mindanao with Average >= 55 using df
-#### and only output the "Name", "Track", "Electronics", and "Average" columns
+#### b.3 Filter only the Female students from Mindanao with Average >= 55 using df and only output the "Name", "Track", "Electronics", and "Average" columns
 ```python
 Mindy = df[(df["Hometown"] == "Mindanao") &
             (df["Gender"] == "Female") & 
